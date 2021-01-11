@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MediaQuery Exercise</title>
+        
+        <style>
+            div {
+                border: 5px solid green;
+                font-size: 48px;
+            }
+            /* min: 최소/~보다 클때 효과 발생, max: 최대/~보다 작을때 효과 발생 */
+            @media(min-width: 800px) {
+                div {
+                    display: none;
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+            Responsive
+        </div>
+    </body>
+</html>

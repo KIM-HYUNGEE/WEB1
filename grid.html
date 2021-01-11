@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Grid Exercise</title>
+
+        <style>
+            #grid {
+                border: 3px solid green;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                /*
+                fr의 의미는 등분을 의미. 1fr 1fr = 1:1, 2fr 1fr = 2:1
+                */
+            }
+
+            div {
+                border: 3px solid gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="grid">
+            <div>NAVIGATION</div> 
+            <div>ARTICLE</div>        
+        </div>
+    </body>
+</html>
