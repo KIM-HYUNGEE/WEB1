@@ -5,76 +5,47 @@
   <title>WEB1 - HTML</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <!-- css를 쓸 거라는 표현 -->
-  <!--
-  <style> 
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: blue;
-    }
-
-    a:visited {
-      text-decoration: underline;
-      color: red;
-    }
-
-    h1 {
-      font-size: 48px;
-      text-align: center;
-      border-bottom: 5px solid black;
-      margin: 0;
-      padding: 10px;
-    }
-
-    h2, p {
-      margin: 10px;
-    }
-
-    #grid {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-    }
-
-    #grid ul {
-      list-style-type: none;
-      border-right: 3px solid black;
-      width: 100px;
-      margin: 0;
-      padding-top: 10px;
-    }
-
-    @media(max-width: 800px) {
-      #grid {
-        display: block;
-      }
-
-      #grid ul {
-        border-right: none;
-      }
-
-      #miniGrid {
-        padding-top: 10px;
-      }
-
-      #miniGrid h2 {
-        border-top: 3px solid black;
-        margin: 0;
-        padding: 15px;
-      }
-    }
-  </style>
-  -->
 
 </head>
 
 <body>
 
   <h1><a href="index.html">WEB</a></h1>
+  <!--
+  <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+  ">
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+  ">
+  -->
+
+  <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'day') {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      var links = document.querySelectorAll('a');
+      for (i=0; i<links.length; i++) {
+        links[i].style.color = 'blue';
+      }
+    } else {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+
+      var links = document.querySelectorAll('a');
+      for (i=0; i<links.length; i++) {
+        links[i].style.color = 'powderblue';
+      }
+    }
+
+  ">
+
   <div id="grid">
     <ul>
       <li><a href="1.html">HTML</a></li>
@@ -83,9 +54,9 @@
     </ul>
 
     <div id="miniGrid">
-      <h2><font color="black">Welcome</h2>
+      <h2>Welcome</h2>
       <img src="www.jpeg" width="300px">
-      <p><font color="black">The World Wide Web Consortium (W3C) is the main international standards organization for the World Wide Web. Founded in 1994 and currently led by Tim Berners-Lee, the consortium is made up of member organizations that maintain full-time staff working together in the development of standards for the World Wide Web. As of 21 October 2019, W3C had 443 members. W3C also engages in education and outreach, develops software and serves as an open forum for discussion about the Web.
+      <p>The World Wide Web Consortium (W3C) is the main international standards organization for the World Wide Web. Founded in 1994 and currently led by Tim Berners-Lee, the consortium is made up of member organizations that maintain full-time staff working together in the development of standards for the World Wide Web. As of 21 October 2019, W3C had 443 members. W3C also engages in education and outreach, develops software and serves as an open forum for discussion about the Web.
       </p>
     </div>
   </div> 
